@@ -1,15 +1,14 @@
-
 # MQTT
 
 ## Tehtävät
 
- 1. Asenna MQTT serveri raspberry pi:lle tai muulle koneelle
- 2. Kerää mittausdataa mqtt:llä ESP:ltä
+ 1. Asenna MQTT serveri raspberry pi:lle tai muulle koneelle. Voit myös käyttää HiveMQ julista bokeria (https://www.hivemq.com/public-mqtt-broker/)
+ 2. Kerää **oikean anturin** mittausdataa mqtt:llä ESP:ltä
  3. Kaksisuuntainen kommunikaatio. Lähetä mqtt:llä ESP:lle komento, joka vaikuttaa mittaamiseen
 
 ## Lisätehtävät
 
- 1. Kirjoita keinoista turvata MQTT -kommunikaatio
+ 1. Kirjoita lyhyesti keinoista turvata MQTT -kommunikaatio
 
 ## Linkkejä
 
