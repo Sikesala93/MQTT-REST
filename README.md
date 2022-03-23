@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://peke.plab.fi/mittaus-palautukset/mqtt-rest.git
+git remote add origin https://peke.plab.fi/palautukset/mqtt-rest.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://peke.plab.fi/mittaus-palautukset/mqtt-rest/-/settings/integrations)
+- [ ] [Set up project integrations](https://peke.plab.fi/palautukset/mqtt-rest/-/settings/integrations)
 
 ## Collaborate with your team
 
