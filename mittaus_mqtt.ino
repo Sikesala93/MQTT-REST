@@ -8,14 +8,14 @@
 
 /************************* WiFi Access Point *********************************/
 
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "IOTLABRA";
+const char* password = "iotlabra2020";
 
 /************************* mqtt setup *********************************/
 
-char server[] = "192.168.1.100";
-char pubTopic[] = "mittaus/esp/get";
-char clientId[] = "esp32_mikko";
+char server[] = "broker.hivemq.com";
+char pubTopic[] = "mittaus/ope/value/temperature";
+char clientId[] = "esp32_Sirkku";
 
 /************ Global State ******************/
 
@@ -81,16 +81,22 @@ void loop() {
 
   if (now - lastMsg > 3000) {
     lastMsg = now;
-    String payload = "{\"name\":\"esp-sensor\"";
+
+    
+   /* String payload = "{\"name\":\"esp-SirQ\"";
               payload += ",\"value\":";
               payload += x;
-              payload += "}";
+              payload += "}";*/
     x++;
 
-    Serial.print("Sending payload: ");
-    Serial.println(payload);
+    char payload(16);
+    itoa(x, payload, 10);
+  
 
-    if (client.publish(pubTopic, (char*) payload.c_str())) {
+    /*Serial.print("Sending payload: ");
+    Serial.println(payload);*/
+
+    if (client.publish(pubTopic, (char*) .cstr())) {
       Serial.println("Publish ok");
     } else {
       Serial.println("Publish failed");

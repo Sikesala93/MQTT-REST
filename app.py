@@ -15,7 +15,9 @@ def on_connect(client, userdata, flags, rc):
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("mittaus/get")
+    client.subscribe("mittaus/ope")
+    client.publish("mittaus/ope", "SirQ Paikalla")
+
 
 
 # The callback for when a PUBLISH message is received from the server.
@@ -23,14 +25,13 @@ def on_message(client, userdata, msg):
     print(f'{msg.topic}: {str(msg.payload.decode("utf-8"))}')
 
     # This is how to publish messages with python paho mqtt
-    client.publish("mittaus/python", "message received")
 
 
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("192.168.1.200", 1883, 60)
+client.connect("broker.hivemq.com", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
